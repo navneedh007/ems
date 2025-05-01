@@ -1,0 +1,45 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    padding: 20px;
+    border-right: 1px solid #dee2e6;
+    background-color: #f8f9fa;
+  }
+  
+  main {
+    margin-left: 16.66667%; /* For col-lg-2 */
+  }
+  
+  .nav-link {
+    color: #333;
+    padding: 0.5rem 1rem;
+  }
+  
+  .nav-link:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .nav-link.active {
+    color: #0d6efd;
+    background-color: #e9ecef;
+  }
+  
+  @media (max-width: 991.98px) {
+    main {
+        margin-left: 25%; /* For col-md-3 */
+    }
+  }
+  
+  @media (max-width: 767.98px) {
+    .sidebar {
+        position: static;
+        height: auto;
+    }
+    
+    main {
+        margin-left: 0;
+    }
+  }

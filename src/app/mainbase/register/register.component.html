@@ -1,0 +1,94 @@
+<div class="register-container min-vh-100 d-flex align-items-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+        <div class="card shadow-lg border-0 rounded-4">
+          <div class="card-header bg-white border-0 pt-3">
+            <h3 class="text-center fw-bold text-primary mb-0">Create Account</h3>
+            <p class="text-center text-muted small mt-1">Join Eventify today</p>
+          </div>
+          <div class="card-body p-4">
+            <form (ngSubmit)="onSubmit()">
+              <div class="mb-3">
+                <label for="name" class="form-label small fw-semibold text-secondary">Full Name</label>
+                <input type="text" class="form-control" id="name" 
+                       [(ngModel)]="registerData.Name" name="name" required 
+                       placeholder="Enter your full name">
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label small fw-semibold text-secondary">Email Address</label>
+                <input type="email" class="form-control" id="email" 
+                       [(ngModel)]="registerData.Email" name="email" required
+                       placeholder="Enter your email">
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label small fw-semibold text-secondary">Password</label>
+                <input type="password" class="form-control" id="password" 
+                       [(ngModel)]="registerData.Password" name="password" required
+                       placeholder="Create a password">
+              </div>
+              <div class="mb-3">
+                <label for="contact" class="form-label small fw-semibold text-secondary">Contact Number</label>
+                <input type="tel" class="form-control" id="contact" 
+                       [(ngModel)]="registerData.ContactNumber" name="contact" required
+                       placeholder="Enter your contact number">
+              </div>
+              <div class="mb-4">
+                <label for="userType" class="form-label small fw-semibold text-secondary">Account Type</label>
+                <select class="form-select" id="userType" 
+                        [(ngModel)]="registerData.UserType" name="userType" required>
+                  <option value="">Select Account Type</option>
+                  <option value="admin">Admin</option>
+                  <option value="user">User</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary w-100 mb-3">Create Account</button>
+              <p class="text-center text-muted small mb-0">
+                Already have an account? <a routerLink="/app-login" class="text-primary text-decoration-none">Sign In</a>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.register-container {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  margin-top: 76px;
+  padding: 1rem 0;
+}
+
+.form-control, .form-select {
+  border: 1px solid #dee2e6;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.95rem;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.1);
+}
+
+.btn-primary {
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(13, 110, 253, 0.15);
+}
+
+.card {
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1) !important;
+}
+</style>
